@@ -1,0 +1,13 @@
+.search{
+    text-align: center;
+}
+#input{
+    background-color: white;
+    height: 40px;
+    width: 1000px;
+    font-size: 20px;
+}
+.btn1{
+    height: 40px;
+    width: 40px;
+}
