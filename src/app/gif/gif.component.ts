@@ -10,6 +10,7 @@ import{Subscription} from 'rxjs'
 export class GifComponent implements OnInit,OnDestroy {
 gifs:any[]=[];
 subscription:Subscription
+
   constructor(private gifService:GifService) { }
 
   ngOnInit(): void {
@@ -17,10 +18,9 @@ subscription:Subscription
     this.subscription=this.gifService.getGifs()
     .subscribe((response:any)=>{
       this.gifs=response
-      console.log('Data',response)
     })
   }
  ngOnDestroy(){
-   this.subscription.unsubscribe()
+   this.subscription.unsubscribe();
  }
 }
